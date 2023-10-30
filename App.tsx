@@ -3,6 +3,9 @@ import { View } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import store from './src/features/store';
 import { Provider as ReduxProvider } from 'react-redux';
+import MainNavigator from "./src/MainNavigator";
+import { AppearanceProvider } from "./src/context/AppearanceContext";
+import { StorageProvider } from "./src/context/StorageContext";
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -24,8 +27,11 @@ export default function App() {
 function ProviderTree() {
     return (
         <Composer components={[
-            SafeAreaProvider
+            SafeAreaProvider,
+            AppearanceProvider,
+            StorageProvider
         ]}>
+            <MainNavigator />
         </Composer>
     );
 }
