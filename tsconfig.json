@@ -1,0 +1,12 @@
+{
+    "extends": "@tsconfig/react-native/tsconfig.json",
+    "compilerOptions": {
+        "strict": true,
+        "skipLibCheck": true,
+        "outDir": "dist",
+        "noEmit": true
+    },
+    "exclude": [
+        "**/tsconfig.json"
+    ]
+}
