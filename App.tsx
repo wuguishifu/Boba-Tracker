@@ -5,7 +5,7 @@ import store from './src/features/store';
 import { Provider as ReduxProvider } from 'react-redux';
 import MainNavigator from "./src/MainNavigator";
 import { AppearanceProvider } from "./src/context/AppearanceContext";
-import { StorageProvider } from "./src/context/StorageContext";
+import { DatabaseProvider } from "./src/context/DatabaseContext";
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -29,7 +29,7 @@ function ProviderTree() {
         <Composer components={[
             SafeAreaProvider,
             AppearanceProvider,
-            StorageProvider
+            DatabaseProvider
         ]}>
             <MainNavigator />
         </Composer>
